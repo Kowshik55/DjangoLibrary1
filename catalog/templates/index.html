@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Local Library Home</h1>
+
+<p>Welcome to <em>UNO Library</em></p>
+
+
+<h2>MIS Books Here</h2>
+
+
+<div>
+{% load static %}
+<img src="{% static "images/Best-of-the-Best.jpg" %}" alt="My image" style="width:555px;height:540px;"/>
+</div>  
+
+
+<h2>Present Volumes</h2>
+
+<p>The library has the following contents:</p>
+<ul>
+<li><strong>Books:</strong> {{ num_books }}</li>
+<li><strong>Copies:</strong> {{ num_instances }}</li>
+<li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+<li><strong>Authors:</strong> {{ num_authors }}</li>
+</ul>
+
+
+<p>Thanks for visiting our page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+
+{% endblock %}
